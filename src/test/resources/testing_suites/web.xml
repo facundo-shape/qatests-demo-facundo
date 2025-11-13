@@ -9,13 +9,9 @@
             </run>
         </groups>
         <classes>
-            <class name="com.solvd.saucedemo.gui.desktop.SaucedemoGuiDeskTest">
+            <class name="com.blinou.saucedemo.gui.desktop.SaucedemoGuiDeskTest">
                 <methods>
                     <include name="testSuccessfulUserAccess"/>
-                    <include name="testLockedOutUserAccess"/>
-                    <include name="testProductCardsDisplay"/>
-                    <include name="testProductDetailsDisplay"/>
-                    <include name="testAddProductToCart"/>
                 </methods>
             </class>
         </classes>

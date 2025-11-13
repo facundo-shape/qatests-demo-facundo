@@ -1,9 +1,0 @@
-[2025-11-04 12:54:01] [1] [WARN] Reporting disabled: using no op test run registrar
-[2025-11-04 12:54:01] [1] [INFO] TEST [qatests-demo-api-desctop-mobiles-kt - testSuccessfulUserAccess] STARTED at [13:54:01 2025-11-04]
-[2025-11-04 12:54:01] [1] [INFO] Starting driver session...
-[2025-11-04 12:54:03] [1] [INFO] Driver session started.
-[2025-11-04 12:54:03] [1] [INFO] INFO: opening url 'https://www.saucedemo.com/'
-[2025-11-04 12:54:04] [1] [INFO] Keys 'standard_user' are sent to element 'inputUserName'.
-[2025-11-04 12:54:04] [1] [INFO] Keys 'secret_sauce' are sent to element 'inputPassword'.
-[2025-11-04 12:54:04] [1] [INFO] Element 'loginButton' is clicked.
-[2025-11-04 12:59:25] [1] [INFO] TEST [qatests-demo-api-desctop-mobiles-kt - testSuccessfulUserAccess] PASSED at [13:59:25 2025-11-04]

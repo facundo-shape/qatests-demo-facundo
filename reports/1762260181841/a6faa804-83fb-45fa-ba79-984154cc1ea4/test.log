@@ -1,5 +1,0 @@
-[2025-11-04 12:43:03] [1] [WARN] Reporting disabled: using no op test run registrar
-[2025-11-04 12:43:03] [1] [INFO] TEST [qatests-demo-api-desctop-mobiles-kt - testSuccessfulUserAccess] STARTED at [13:43:03 2025-11-04]
-[2025-11-04 12:43:03] [1] [INFO] Starting driver session...
-[2025-11-04 12:43:06] [1] [INFO] Driver session started.
-[2025-11-04 12:43:06] [1] [INFO] INFO: opening url 'https://www.saucedemo.com/'

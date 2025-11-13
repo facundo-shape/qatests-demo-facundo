@@ -18,7 +18,8 @@ object GuiConstants {
     val PASSWORD: String = R.TESTDATA.get("saucedemo.password")
 
     const val EXPECTED_ERROR_MESSAGE = "Epic sadface: Sorry, this user has been locked out."
-    const val EXPECTED_ERROR_MESSAGE_LOCKED_OUT_USER = "Sorry, this user has been locked out."
+
+    //const val EXPECTED_ERROR_MESSAGE_LOCKED_OUT_USER = "Sorry, this user has been locked out."
     const val EXPECTED_ERROR_MESSAGE_INVALID_CREDENTIALS = "Username and password do not match any user in this service."
 
     const val COLOR_NAME = "color"

@@ -20,6 +20,8 @@ class LoginPage: AbstractPage {
     @FindBy(id = "login-button")
     private lateinit var loginButton: ExtendedWebElement
 
+    @FindBy(className = "error-message-container")
+    private lateinit var errorMessageContainer: ExtendedWebElement
 
     constructor(driver: WebDriver) : super(driver) {
         setPageOpeningStrategy(PageOpeningStrategy.BY_ELEMENT)
@@ -39,5 +41,9 @@ class LoginPage: AbstractPage {
         typePassword(password)
         loginButton.click()
 
+    }
+
+    fun getErrorMessage(): String {
+        return errorMessageContainer.text
     }
 }

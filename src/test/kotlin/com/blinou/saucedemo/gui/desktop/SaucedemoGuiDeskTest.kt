@@ -1,9 +1,13 @@
+/**
+ *
+ */
+
 package com.blinou.saucedemo.gui.desktop
 
-
 import com.blinou.saucedemo.gui.common.pages.LoginPage
-import com.blinou.saucedemo.gui.common.pages.LoginPage1
 import com.blinou.saucedemo.gui.common.pages.ProductsPage
+import com.blinou.saucedemo.gui.constants.GuiConstants.EXPECTED_ERROR_MESSAGE
+import com.blinou.saucedemo.gui.constants.GuiConstants.LOCKED_OUT_USERNAME
 //import com.blinou.saucedemo.gui.common.pages.ProductsPage
 import com.zebrunner.agent.core.annotation.TestLabel
 import com.zebrunner.carina.core.IAbstractTest
@@ -32,8 +36,33 @@ class SaucedemoGuiDeskTest : IAbstractTest {
         Assert.assertTrue(productsPage.isPageOpened, "Products page is not opened.")
     }
 
+    @Test(groups = ["functional"])
+    @MethodOwner(owner = "saucedemoGuiDesktop")
+    @TestLabel(name = "feature", value = ["web", "regression"])
+    fun testLockedOutUserAccess() {
+        val loginPage = LoginPage(getDriver())
+        loginPage.open()
+        Assert.assertTrue(loginPage.isPageOpened, "Login page is not opened.")
 
+        loginPage.login(LOCKED_OUT_USERNAME, PASSWORD)
+        Assert.assertEquals(
+            loginPage.getErrorMessage(), EXPECTED_ERROR_MESSAGE, "Error message does not match")
+    }
 
+    @Test(groups = ["functional"])
+    @MethodOwner(owner = "saucedemoGuiDesktop")
+    @TestLabel(name = "feature", value = ["web", "regression"])
+    fun testCartIconTrue() {
+        val loginPage = LoginPage(getDriver())
+        loginPage.open()
+        Assert.assertTrue(loginPage.isPageOpened, "Login page is not opened.")
+
+        // Credentials from your config or constants
+        loginPage.login(STANDARD_USERNAME, PASSWORD)
+
+        val productsPage = ProductsPage(getDriver())
+        Assert.assertTrue(productsPage.getHeader().isShoppingCartIconPresent(), "Error")
+    }
 
 
 
